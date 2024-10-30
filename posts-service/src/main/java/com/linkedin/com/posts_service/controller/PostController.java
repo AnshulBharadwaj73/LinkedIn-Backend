@@ -22,7 +22,7 @@ public class PostController {
 
     @PostMapping
     public ResponseEntity<PostDto> createPost(@RequestBody PostCreateRequestDto postDto, HttpServletRequest httpServletRequest){
-        PostDto createdPost = postService.createPost(postDto,1L);
+        PostDto createdPost = postService.createPost(postDto);
 
         return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
     }
