@@ -44,6 +44,8 @@ public interface PersonRepository extends Neo4jRepository<Person,Long> {
             "DELETE r")
     void rejectConnectionRequest(Long senderId, Long receiverId);
 
+    @Query("MERGE (p:Person {userId: $userId, name: $name})")
+    void addUserToConnectionService(Long userId, String name);
 
 
 }

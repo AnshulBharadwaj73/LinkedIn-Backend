@@ -1,5 +1,6 @@
 package com.linkedin.com.connection_service.controller;
 
+import com.linkedin.com.connection_service.dto.PersonDto;
 import com.linkedin.com.connection_service.entity.Person;
 import com.linkedin.com.connection_service.service.ConnectionsService;
 import lombok.RequiredArgsConstructor;
@@ -33,5 +34,10 @@ public class ConnectionsController {
     @PostMapping("/reject/{userId}")
     public ResponseEntity<Boolean> rejectConnectionRequest(@PathVariable Long userId){
         return ResponseEntity.ok(connectionsService.rejectConnectionRequest(userId));
+    }
+
+    @PostMapping("/person")
+    public ResponseEntity<Boolean> addUserToConnectionService(@RequestBody PersonDto personDto){
+        return ResponseEntity.ok(connectionsService.addUserToConnectionService(personDto));
     }
 }

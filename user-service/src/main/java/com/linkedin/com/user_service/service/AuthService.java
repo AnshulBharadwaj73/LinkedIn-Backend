@@ -1,6 +1,8 @@
 package com.linkedin.com.user_service.service;
 
+import com.linkedin.com.user_service.clients.ConnectionsClient;
 import com.linkedin.com.user_service.dto.LoginRequestDto;
+import com.linkedin.com.user_service.dto.PersonDto;
 import com.linkedin.com.user_service.dto.SignupRequestDto;
 import com.linkedin.com.user_service.dto.UserDto;
 import com.linkedin.com.user_service.entity.User;
@@ -21,6 +23,7 @@ public class AuthService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final JwtService jwtService;
+    private final ConnectionsClient connectionsClient;
 
     public UserDto signup(SignupRequestDto signupRequestDto) {
         boolean exists = userRepository.existsByEmail(signupRequestDto.getEmail());
@@ -32,6 +35,9 @@ public class AuthService {
         user.setPassword(PasswordUtil.hashPassword(signupRequestDto.getPassword()));
 
         User savedUser= userRepository.save(user);
+        PersonDto personDto = modelMapper.map(savedUser, PersonDto.class);
+        System.out.println(personDto);
+        connectionsClient.addUserToConnectionService(personDto);
 
         return modelMapper.map(user,UserDto.class);
     }

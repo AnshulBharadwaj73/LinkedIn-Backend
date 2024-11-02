@@ -1,6 +1,7 @@
 package com.linkedin.com.connection_service.service;
 
 import com.linkedin.com.connection_service.auth.UserContextHolder;
+import com.linkedin.com.connection_service.dto.PersonDto;
 import com.linkedin.com.connection_service.entity.Person;
 import com.linkedin.com.connection_service.event.AcceptConnectionRequestEvent;
 import com.linkedin.com.connection_service.event.SendConnectionRequestEvent;
@@ -93,6 +94,15 @@ public class ConnectionsService {
 
         personRepository.rejectConnectionRequest(senderId,receiverId);
 
+        return true;
+    }
+
+    public Boolean addUserToConnectionService(PersonDto personDto) {
+        Long userId= personDto.getUserId();
+        String name = personDto.getName();
+
+
+        personRepository.addUserToConnectionService(userId,name);
         return true;
     }
 }
