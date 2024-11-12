@@ -37,12 +37,20 @@ public class ConnectionsService {
             throw new RuntimeException(("Both sender and receiver cannot be same"));
         }
 
-        boolean alreadySentRequest  =personRepository.connectionRequestExists(senderId,receiverId);
+//        boolean alreadySentRequest  =personRepository.connectionRequestExists(senderId,receiverId);
+//
+//
+//        if(alreadySentRequest){
+//            throw new RuntimeException(("Connection request already exist, cannot send again"));
+//        }
+        log.info("sender id "+senderId+" receiver id "+receiverId);
 
-
-        if(alreadySentRequest){
-            throw new RuntimeException(("Connection request already exist, cannot send again"));
+        Long connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
+        log.info("sndkjhbffjhshfbhjfbj..........."+connectionRequestExists);
+        if(connectionRequestExists!=0){
+            throw new RuntimeException(("No connection request exits , cannot delete"));
         }
+
 
         boolean alreadyConnected = personRepository.alreadyConnected(senderId,receiverId);
 
@@ -66,10 +74,18 @@ public class ConnectionsService {
     public Boolean acceptConnectionRequest(Long senderId) {
         Long receiverId = UserContextHolder.getCurrentUserId();
 
-        boolean connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
-        if(!connectionRequestExists){
-            throw new RuntimeException(("No connection request exists to accept"));
+//        boolean connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
+//        if(!connectionRequestExists){
+//            throw new RuntimeException(("No connection request exists to accept"));
+//        }
+        log.info("sender id "+senderId+" receiver id "+receiverId);
+
+        Long connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
+        log.info("sndkjhbffjhshfbhjfbj..........."+connectionRequestExists);
+        if(connectionRequestExists==0){
+            throw new RuntimeException(("No connection request exits , cannot delete"));
         }
+
 
         personRepository.acceptConnectionRequest(senderId,receiverId);
 
@@ -86,9 +102,11 @@ public class ConnectionsService {
 
     public Boolean rejectConnectionRequest(Long senderId) {
         Long receiverId = UserContextHolder.getCurrentUserId();
+        log.info("sender id "+senderId+" receiver id "+receiverId);
 
-        boolean connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
-        if(!connectionRequestExists){
+        Long connectionRequestExists  =personRepository.connectionRequestExists(senderId,receiverId);
+        log.info("sndkjhbffjhshfbhjfbj..........."+connectionRequestExists);
+        if(connectionRequestExists==0){
             throw new RuntimeException(("No connection request exits , cannot delete"));
         }
 
@@ -103,6 +121,11 @@ public class ConnectionsService {
 
 
         personRepository.addUserToConnectionService(userId,name);
+        return true;
+    }
+
+    public Boolean deleteUserWithUserId(Long userId) {
+        personRepository.deleteUserWithUserId(userId);
         return true;
     }
 }

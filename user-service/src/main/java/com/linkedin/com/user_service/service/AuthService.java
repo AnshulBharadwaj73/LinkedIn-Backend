@@ -1,10 +1,7 @@
 package com.linkedin.com.user_service.service;
 
 import com.linkedin.com.user_service.clients.ConnectionsClient;
-import com.linkedin.com.user_service.dto.LoginRequestDto;
-import com.linkedin.com.user_service.dto.PersonDto;
-import com.linkedin.com.user_service.dto.SignupRequestDto;
-import com.linkedin.com.user_service.dto.UserDto;
+import com.linkedin.com.user_service.dto.*;
 import com.linkedin.com.user_service.entity.User;
 import com.linkedin.com.user_service.exception.BadRequestException;
 import com.linkedin.com.user_service.exception.ResourceNotFoundException;
@@ -54,5 +51,14 @@ public class AuthService {
         }
 
         return jwtService.generateAccessToken(user);
+    }
+
+    public Boolean deleteUser(Long userId){
+        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User with "+userId+" not found"));
+
+        userRepository.delete(user);
+        connectionsClient.deleteUserToConnectionService(userId);
+
+        return true;
     }
 }

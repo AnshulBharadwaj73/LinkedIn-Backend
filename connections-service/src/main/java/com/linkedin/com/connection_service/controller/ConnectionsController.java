@@ -40,4 +40,10 @@ public class ConnectionsController {
     public ResponseEntity<Boolean> addUserToConnectionService(@RequestBody PersonDto personDto){
         return ResponseEntity.ok(connectionsService.addUserToConnectionService(personDto));
     }
+
+    @DeleteMapping("/deletePerson/{userId}")
+    public ResponseEntity<Boolean> deleteUserToConnectionService(@PathVariable Long userId){
+
+        return ResponseEntity.ok(connectionsService.deleteUserWithUserId(userId));
+    }
 }

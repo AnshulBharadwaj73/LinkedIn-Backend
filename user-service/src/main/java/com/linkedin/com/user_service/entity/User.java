@@ -1,6 +1,7 @@
 package com.linkedin.com.user_service.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,7 @@ public class User {
     @Column(nullable = false)
     private String name;
 
+    @Email
     @Column(nullable = false,unique = true)
     private String email;
 
