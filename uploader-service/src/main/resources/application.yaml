@@ -1,0 +1,10 @@
+spring.application.name: uploader-service
+
+server.servlet.context-path: /uploads
+server.port: 9050
+eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+
+cloudinary:
+  cloud-name: dlvusw5pr
+  api-key: 688671836494147
+  api-secret: SVDSDDYoS-V3q07Mb3wvRTI-3xQ

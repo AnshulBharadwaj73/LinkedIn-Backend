@@ -10,6 +10,7 @@ import com.linkedin.com.user_service.util.PasswordUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,6 +22,7 @@ public class AuthService {
     private final ModelMapper modelMapper;
     private final JwtService jwtService;
     private final ConnectionsClient connectionsClient;
+//    private final AuthenticationManager authenticationManager;
 
     public UserDto signup(SignupRequestDto signupRequestDto) {
         boolean exists = userRepository.existsByEmail(signupRequestDto.getEmail());
@@ -61,4 +63,8 @@ public class AuthService {
 
         return true;
     }
+
+//    public Long getUserId(){
+//        return
+//    }
 }

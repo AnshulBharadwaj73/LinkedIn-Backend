@@ -34,6 +34,7 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       KAFKA_CLUSTERS_0_KSQLDBSERVER: http://ksqldb0:8088
 
+
   notification-db:
     image: postgres
     container_name: notification-db
@@ -45,6 +46,20 @@ services:
       - linkedin-network
     volumes:
       - notification-db-data:/var/lib/postgresql/data
+
+  mongo-db:
+    image: mongo:latest   # Official MongoDB image
+    container_name: mongodb-container
+    environment:
+      - MONGODB_ROOT_PASSWORD=root123
+      - MONGODB_USERNAME=root
+      - MONGODB_DATABASE=user-profile
+    ports:
+      - "27017:27017"
+    networks:
+      - linkedin-network
+    volumes:
+      - mongodb-data:/data/db
 
   posts-db:
     image: postgres
@@ -84,6 +99,8 @@ services:
       - linkedin-network
 
   discovery-server:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/discovery-server
     image: anshul9589/linkedin-app/discovery-server
     container_name: discovery-server
     networks:
@@ -92,6 +109,8 @@ services:
       - "8761:8761"
 
   notification-service:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/notification-service
     image: anshul9589/linkedin-app/notification-service
     container_name: notification-service
     networks:
@@ -102,6 +121,8 @@ services:
       - kafka
 
   posts-service:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/posts-service
     image: anuj55149/linkedin-app-posts-service
     container_name: posts-service
     networks:
@@ -112,6 +133,8 @@ services:
       - kafka
 
   user-service:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/user-service
     image: anshul9589/linkedin-app/user-service
     container_name: user-service
     networks:
@@ -122,6 +145,8 @@ services:
       - kafka
 
   connections-service:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/connections-service
     image: anshul9589/linkedin-app/connection-service
     container_name: connections-service
     networks:
@@ -131,7 +156,20 @@ services:
       - connections-db
       - kafka
 
+  user-profile:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/user-profile
+    image: anshul9589/linkedin-app/user-profile
+    container_name: user-profile
+    networks:
+      - linkedin-network
+    depends_on:
+      - discovery-server
+      - mongo-db
+
   api-gateway:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/api-gateway
     image: anshul9589/linkedin-app/api-gateway
     container_name: api-gateway
     ports:
@@ -151,3 +189,4 @@ volumes:
   posts-db-data:
   user-db-data:
   connections-db-data:
+  mongodb-data:

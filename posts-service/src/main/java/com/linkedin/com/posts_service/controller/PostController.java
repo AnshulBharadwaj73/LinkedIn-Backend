@@ -41,4 +41,11 @@ public class PostController {
 
         return ResponseEntity.ok(posts);
     }
+    @GetMapping("/users/allPosts")
+    public ResponseEntity<List<Post>> getAllPosts(){
+        List<Post> posts = postService.getAllPosts();
+
+        return ResponseEntity.ok(posts);
+    }
+
 }

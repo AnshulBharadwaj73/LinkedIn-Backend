@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name = "connections-service", path = "/connections")
-public interface ConnectionsClient {
+public interface  ConnectionsClient {
 
     @PostMapping("/core/person")
     public void addUserToConnectionService(@RequestBody PersonDto personDto);
 
     @DeleteMapping("/core/deletePerson/{userId}")
     public void deleteUserToConnectionService(@PathVariable Long userId);
+
+
 }

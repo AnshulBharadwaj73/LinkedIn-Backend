@@ -1,0 +1,20 @@
+server:
+  error:
+    include-message: always
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: root123
+      database: user-profile
+      port: 27017
+      host: localhost
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG

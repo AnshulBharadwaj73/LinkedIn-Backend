@@ -2,7 +2,6 @@ package com.linkedin.com.posts_service.service;
 
 import com.linkedin.com.posts_service.auth.UserContextHolder;
 import com.linkedin.com.posts_service.clients.ConnectionsClient;
-import com.linkedin.com.posts_service.dto.PersonDto;
 import com.linkedin.com.posts_service.dto.PostCreateRequestDto;
 import com.linkedin.com.posts_service.dto.PostDto;
 import com.linkedin.com.posts_service.entity.Post;
@@ -63,4 +62,11 @@ public class PostService{
 
         return posts.stream().map((element) -> modelMapper.map(element, PostDto.class)).collect(Collectors.toList());
     }
+
+    public List<Post> getAllPosts(){
+        List<Post> posts = postRepository.findAll();
+
+        return posts;
+    }
+
 }
