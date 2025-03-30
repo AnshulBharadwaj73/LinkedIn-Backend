@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection = "workexperience")
 public class WorkExperience {
 
     private String companyName;

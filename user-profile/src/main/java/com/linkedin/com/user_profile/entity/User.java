@@ -2,7 +2,9 @@ package com.linkedin.com.user_profile.entity;
 
 import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
@@ -16,7 +18,9 @@ import java.util.List;
 public class User {
 
     @Id
-    private Long id;
+    private String id;
+
+    private Long userId;
 
     private String firstName;
 

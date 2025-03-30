@@ -1,7 +1,6 @@
 package com.linkedin.com.posts_service.service;
 
 import com.linkedin.com.posts_service.auth.UserContextHolder;
-import com.linkedin.com.posts_service.clients.ConnectionsClient;
 import com.linkedin.com.posts_service.dto.PostCreateRequestDto;
 import com.linkedin.com.posts_service.dto.PostDto;
 import com.linkedin.com.posts_service.entity.Post;
@@ -15,6 +14,8 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,7 +25,7 @@ public class PostService{
 
     private final PostRepository postRepository;
     private final ModelMapper modelMapper;
-    private final ConnectionsClient connectionsClient;
+    private final ConnectionPostService connectionPostService;
 
     private final KafkaTemplate<Long, PostCreatedEvent> kafkaTemplate;
 
@@ -66,7 +67,13 @@ public class PostService{
     public List<Post> getAllPosts(){
         List<Post> posts = postRepository.findAll();
 
-        return posts;
+        List<Long> connectedUserIds=connectionPostService.getAllConnection().stream().map(id -> id.getUserId()).toList();
+
+        List<Post> post = connectedUserIds.stream()
+                .flatMap(id -> postRepository.findByUserId(id).stream()) // Fetch posts for each user
+                .toList();
+
+        return post;
     }
 
 }

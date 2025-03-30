@@ -15,13 +15,14 @@
         <module name="user-service" />
         <module name="notification-service" />
       </profile>
-      <profile name="Annotation profile for uploader-service" enabled="true">
+      <profile name="Annotation profile for job-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
+        <module name="job-service" />
         <module name="uploader-service" />
       </profile>
     </annotationProcessing>
@@ -35,6 +36,7 @@
       <module name="connection-service" options="-parameters" />
       <module name="connections-service" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
+      <module name="job-service" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="posts-service" options="-parameters" />
       <module name="uploader-service" options="-parameters" />

@@ -46,6 +46,14 @@ spring:
             - StripPrefix=2
             - name: AuthenticationFilter
 
+        - id: job-service
+          uri: lb://JOB-SERVICE
+          predicates:
+            - Path=/api/v1/jobs/**
+          filters:
+            - StripPrefix=2
+            - name: AuthenticationFilter
+
         - id: connections-service
           uri: lb://CONNECTIONS-SERVICE
           predicates:
@@ -54,12 +62,12 @@ spring:
             - StripPrefix=2
             - name: AuthenticationFilter
 
-        - id: user-profile
-          uri: lb://USER-PROFILE
-          predicates:
-            - Path=/api/v1/profile/**
-          filters:
-            - StripPrefix=2
-            - name: AuthenticationFilter
+#        - id: user-profile
+#          uri: lb://USER-PROFILE
+#          predicates:
+#            - Path=/api/v1/profile/**
+#          filters:
+#            - StripPrefix=2
+#            - name: AuthenticationFilter
 
 

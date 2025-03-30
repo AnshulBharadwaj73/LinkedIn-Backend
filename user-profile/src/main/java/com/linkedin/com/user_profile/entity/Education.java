@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection = "education")
 public class Education {
 
     private String instituteName;

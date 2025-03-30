@@ -34,4 +34,16 @@ public class ProfileController {
 
         return userService.save(userDto);
     }
+
+    @PutMapping("/update")
+    public UserDto updateUser(@RequestBody UserDto userDto){
+
+        return userService.update(userDto);
+    }
+
+    @PatchMapping("/patch")
+    public UserDto patchUser(@RequestBody UserDto userDto){
+
+        return userService.update(userDto);
+    }
 }
