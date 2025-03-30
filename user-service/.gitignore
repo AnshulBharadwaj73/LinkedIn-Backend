@@ -3,6 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+**/src/main/resources/*.yml
+**/src/main/resources/*.yaml
 
 ### STS ###
 .apt_generated
@@ -12,12 +14,13 @@ target/
 .settings
 .springBeans
 .sts4-cache
-.yaml
+
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
+
 *.ipr
 
 ### NetBeans ###
