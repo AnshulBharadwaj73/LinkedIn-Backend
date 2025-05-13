@@ -85,6 +85,18 @@ services:
     volumes:
       - user-db-data:/var/lib/postgresql/data
 
+  job-db:
+    image: postgres
+    container_name: job-db
+    environment:
+      - POSTGRES_DB=jobdb
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    networks:
+      - linkedin-network
+    volumes:
+      - job-db-data:/var/lib/postgresql/data
+
   connections-db:
     image: neo4j
     container_name: connections-db
@@ -131,6 +143,19 @@ services:
       - discovery-server
       - posts-db
       - kafka
+
+  job-service:
+    build:
+      context: /Users/anshulbharadwaj/SpringBootProject/linkedin/job-service
+    image: anshul9589/linkedin-app/job-service
+    container_name: job-service
+    networks:
+      - linkedin-network
+    depends_on:
+      - discovery-server
+      - job-db
+      - kafka
+      - notification-service
 
   user-service:
     build:
@@ -190,3 +215,4 @@ volumes:
   user-db-data:
   connections-db-data:
   mongodb-data:
+  job-db-data:
