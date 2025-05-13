@@ -5,6 +5,7 @@ import com.linkedin.com.user_profile.entity.Education;
 import com.linkedin.com.user_profile.entity.WorkExperience;
 import lombok.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 

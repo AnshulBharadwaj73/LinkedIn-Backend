@@ -62,12 +62,21 @@ spring:
             - StripPrefix=2
             - name: AuthenticationFilter
 
-#        - id: user-profile
-#          uri: lb://USER-PROFILE
-#          predicates:
-#            - Path=/api/v1/profile/**
-#          filters:
-#            - StripPrefix=2
-#            - name: AuthenticationFilter
+        - id: user-profile
+          uri: lb://USER-PROFILE
+          predicates:
+            - Path=/api/v1/profile/**
+          filters:
+            - StripPrefix=2
+            - name: AuthenticationFilter
+
+        - id: uploader-service
+          uri: lb://UPLOADER-SERVICE
+          predicates:
+            - Path=/api/v1/uploads/**
+          filters:
+            - StripPrefix=2
+            - name: AuthenticationFilter
+
 
 

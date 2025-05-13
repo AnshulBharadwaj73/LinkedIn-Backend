@@ -5,6 +5,7 @@ import lombok.*;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class User {
     private String id;
 
     private Long userId;
+
+    private String profilePicture;
 
     private String firstName;
 

@@ -1,0 +1,15 @@
+10-05-2025 11:26:31.855 [background-preinit] [-] INFO  user-service-o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 8.0.1.Final
+10-05-2025 11:26:31.904 [main] [-] INFO  user-service-c.l.c.u.r.UserRepositoryTest.logStarting - Starting UserRepositoryTest using Java 22.0.2 with PID 18615 (started by anshulbharadwaj in /Users/anshulbharadwaj/SpringBootProject/linkedin/user-service)
+10-05-2025 11:26:31.904 [main] [-] INFO  user-service-c.l.c.u.r.UserRepositoryTest.logStartupProfileInfo - The following 1 profile is active: "dev"
+10-05-2025 11:26:32.072 [main] [-] INFO  user-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-05-2025 11:26:32.143 [main] [-] INFO  user-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+10-05-2025 11:26:32.170 [main] [-] INFO  user-service-o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor.process - Replacing 'dataSource' DataSource bean with embedded version
+10-05-2025 11:26:32.234 [main] [-] INFO  user-service-o.s.j.d.e.EmbeddedDatabaseFactory.initDatabase - Starting embedded database: url='jdbc:h2:mem:f3556755-fe63-4f57-8d08-901d699a017f;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+10-05-2025 11:26:32.357 [main] [-] INFO  user-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-05-2025 11:26:32.384 [main] [-] INFO  user-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+10-05-2025 11:26:32.402 [main] [-] INFO  user-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+10-05-2025 11:26:32.526 [main] [-] INFO  user-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+10-05-2025 11:26:32.923 [main] [-] INFO  user-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+10-05-2025 11:26:32.945 [main] [-] INFO  user-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-05-2025 11:26:33.096 [main] [-] INFO  user-service-c.l.c.u.r.UserRepositoryTest.logStarted - Started UserRepositoryTest in 1.498 seconds (process running for 2.067)
+10-05-2025 11:26:33.507 [SpringApplicationShutdownHook] [-] INFO  user-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface  ConnectionsClient {
 
     @PostMapping("/core/person")
-    public void addUserToConnectionService(@RequestBody PersonDto personDto);
+    public Boolean addUserToConnectionService(@RequestBody PersonDto personDto);
 
     @DeleteMapping("/core/deletePerson/{userId}")
     public void deleteUserToConnectionService(@PathVariable Long userId);

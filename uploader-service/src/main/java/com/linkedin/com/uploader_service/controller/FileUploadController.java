@@ -2,6 +2,7 @@ package com.linkedin.com.uploader_service.controller;
 
 import com.linkedin.com.uploader_service.service.FileUploaderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ public class FileUploadController {
 
     private final FileUploaderService fileUploaderService;
 
-    @PostMapping
+    @PostMapping(value = "/image",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadImage(@RequestParam MultipartFile file){
         try {
             String url = fileUploaderService.upload(file);

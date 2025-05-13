@@ -1,0 +1,296 @@
+05-05-2025 19:55:39.884 [main] [-] INFO  posts-service-c.l.c.p.PostsServiceApplication.logStarting - Starting PostsServiceApplication using Java 22.0.2 with PID 2696 (/Users/anshulbharadwaj/SpringBootProject/linkedin/posts-service/target/classes started by anshulbharadwaj in /Users/anshulbharadwaj/SpringBootProject/linkedin)
+05-05-2025 19:55:39.885 [main] [-] INFO  posts-service-c.l.c.p.PostsServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+05-05-2025 19:55:40.475 [main] [-] INFO  posts-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05-05-2025 19:55:40.563 [main] [-] INFO  posts-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+05-05-2025 19:55:40.764 [main] [-] INFO  posts-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=d7ecd12a-724e-384d-9f0b-257ca46fef6a
+05-05-2025 19:55:40.971 [main] [-] WARN  posts-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+05-05-2025 19:55:40.974 [main] [-] WARN  posts-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+05-05-2025 19:55:41.189 [main] [-] INFO  posts-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9010 (http)
+05-05-2025 19:55:41.196 [main] [-] INFO  posts-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9010"]
+05-05-2025 19:55:41.199 [main] [-] INFO  posts-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-05-2025 19:55:41.199 [main] [-] INFO  posts-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+05-05-2025 19:55:41.243 [main] [-] INFO  posts-service-o.a.c.c.C.[.[localhost].[/posts].log - Initializing Spring embedded WebApplicationContext
+05-05-2025 19:55:41.244 [main] [-] INFO  posts-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
+05-05-2025 19:55:41.466 [main] [-] INFO  posts-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-05-2025 19:55:41.500 [main] [-] INFO  posts-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+05-05-2025 19:55:41.520 [main] [-] INFO  posts-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+05-05-2025 19:55:41.700 [main] [-] INFO  posts-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+05-05-2025 19:55:41.718 [main] [-] INFO  posts-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-05-2025 19:55:41.792 [main] [-] INFO  posts-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c8f65da
+05-05-2025 19:55:41.793 [main] [-] INFO  posts-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-05-2025 19:55:42.335 [main] [-] INFO  posts-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+05-05-2025 19:55:42.392 [main] [-] INFO  posts-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-05-2025 19:55:42.717 [main] [-] WARN  posts-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-05-2025 19:55:42.772 [main] [-] INFO  posts-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'connections-service' URL not provided. Will try picking an instance via load-balancing.
+05-05-2025 19:55:43.275 [main] [-] INFO  posts-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+05-05-2025 19:55:43.301 [main] [-] WARN  posts-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+05-05-2025 19:55:43.316 [main] [-] INFO  posts-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 1 endpoint beneath base path '/actuator'
+05-05-2025 19:55:43.378 [main] [-] INFO  posts-service-o.a.k.c.admin.AdminClientConfig.logAll - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = posts-service-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+05-05-2025 19:55:43.466 [main] [-] INFO  posts-service-o.a.kafka.common.utils.AppInfoParser.<init> - Kafka version: 3.7.1
+05-05-2025 19:55:43.466 [main] [-] INFO  posts-service-o.a.kafka.common.utils.AppInfoParser.<init> - Kafka commitId: e2494e6ffb89f828
+05-05-2025 19:55:43.466 [main] [-] INFO  posts-service-o.a.kafka.common.utils.AppInfoParser.<init> - Kafka startTimeMs: 1746471343465
+05-05-2025 19:55:43.473 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:43.474 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:43.577 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:43.577 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:43.779 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:43.779 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:43.982 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:43.982 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:44.490 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:44.491 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:45.405 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:45.406 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:46.321 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:46.322 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:47.337 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:47.337 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:48.251 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:48.251 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:49.266 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:49.267 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:50.282 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:50.282 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:51.196 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:51.197 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:52.008 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:52.009 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:52.919 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:52.920 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:53.936 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:53.937 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:54.949 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:54.950 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:55.964 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:55.965 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:56.981 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:56.982 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:57.996 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:57.997 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:55:59.013 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:55:59.014 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:00.025 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:00.026 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:01.042 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:01.043 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:02.057 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:02.057 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:03.070 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:03.070 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:04.085 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:04.086 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:05.099 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:05.099 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:06.113 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:06.113 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:07.126 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:07.127 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:08.141 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:08.141 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:09.157 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:09.158 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:10.171 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:10.173 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:11.187 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:11.188 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:12.102 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:12.103 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:13.118 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:13.120 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:13.468 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.k.c.a.i.AdminMetadataManager.updateFailed - [AdminClient clientId=posts-service-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+05-05-2025 19:56:13.476 [main] [-] ERROR posts-service-o.s.kafka.core.KafkaAdmin.error - Could not configure topics
+org.springframework.kafka.KafkaException: Timed out waiting to get existing topics
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$13(KafkaAdmin.java:550)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:529)
+	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:422)
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:274)
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:238)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.linkedin.com.posts_service.PostsServiceApplication.main(PostsServiceApplication.java:12)
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180)
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$13(KafkaAdmin.java:532)
+	... 15 common frames omitted
+05-05-2025 19:56:14.084 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:14.085 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:15.097 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:15.098 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:16.112 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:16.113 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:17.024 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:17.024 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:18.040 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:18.040 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:19.052 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:19.053 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:20.066 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:20.066 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:21.080 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:21.080 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:22.093 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:22.094 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:23.114 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.apache.kafka.clients.NetworkClient.handleDisconnections - [AdminClient clientId=posts-service-admin-0] Node -1 disconnected.
+05-05-2025 19:56:23.115 [kafka-admin-client-thread | posts-service-admin-0] [-] WARN  posts-service-o.apache.kafka.clients.NetworkClient.processDisconnection - [AdminClient clientId=posts-service-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+05-05-2025 19:56:23.478 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.k.clients.admin.KafkaAdminClient.threadShouldExit - [AdminClient clientId=posts-service-admin-0] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
+05-05-2025 19:56:23.480 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.kafka.common.utils.AppInfoParser.unregisterAppInfo - App info kafka.admin.client for posts-service-admin-0 unregistered
+05-05-2025 19:56:23.482 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.k.c.a.i.AdminMetadataManager.updateFailed - [AdminClient clientId=posts-service-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+05-05-2025 19:56:23.482 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.k.clients.admin.KafkaAdminClient.run - [AdminClient clientId=posts-service-admin-0] Timed out 2 remaining operation(s) during close.
+05-05-2025 19:56:23.486 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.kafka.common.metrics.Metrics.close - Metrics scheduler closed
+05-05-2025 19:56:23.486 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.kafka.common.metrics.Metrics.close - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+05-05-2025 19:56:23.487 [kafka-admin-client-thread | posts-service-admin-0] [-] INFO  posts-service-o.a.kafka.common.metrics.Metrics.close - Metrics reporters closed
+05-05-2025 19:56:23.523 [main] [-] INFO  posts-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+05-05-2025 19:56:23.543 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+05-05-2025 19:56:23.546 [main] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 19:56:23.551 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+05-05-2025 19:56:23.551 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+05-05-2025 19:56:23.551 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+05-05-2025 19:56:23.551 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+05-05-2025 19:56:23.551 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+05-05-2025 19:56:23.552 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+05-05-2025 19:56:23.552 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+05-05-2025 19:56:23.886 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+05-05-2025 19:56:23.887 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+05-05-2025 19:56:23.888 [main] [-] INFO  posts-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+05-05-2025 19:56:23.889 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1746471383889 with initial instances count: 1
+05-05-2025 19:56:23.896 [main] [-] INFO  posts-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application POSTS-SERVICE with eureka with status UP
+05-05-2025 19:56:23.896 [main] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1746471383896, current=UP, previous=STARTING]
+05-05-2025 19:56:23.897 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_POSTS-SERVICE/192.168.60.175:posts-service:9010: registering service...
+05-05-2025 19:56:23.897 [main] [-] INFO  posts-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9010"]
+05-05-2025 19:56:23.906 [main] [-] INFO  posts-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9010 (http) with context path '/posts'
+05-05-2025 19:56:23.907 [main] [-] INFO  posts-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9010
+05-05-2025 19:56:23.924 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  posts-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_POSTS-SERVICE/192.168.60.175:posts-service:9010 - registration status: 204
+05-05-2025 19:56:23.941 [main] [-] INFO  posts-service-c.l.c.p.PostsServiceApplication.logStarted - Started PostsServiceApplication in 44.569 seconds (process running for 44.861)
+05-05-2025 20:01:23.563 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:06:23.528 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:11:23.533 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:16:23.540 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:21:23.550 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:26:23.557 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:31:23.572 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:36:23.586 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:41:23.590 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:46:23.599 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:51:23.578 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 20:56:23.578 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:01:23.585 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:06:23.587 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:11:23.593 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:16:23.627 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:21:23.637 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:26:23.645 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:31:23.651 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:36:23.658 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:41:23.681 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:46:23.693 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:51:23.700 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 21:56:23.707 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:01:23.714 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:06:23.723 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:11:23.731 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:16:23.739 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:21:23.744 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:26:23.747 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:31:23.755 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:36:23.764 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:41:23.774 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:46:23.782 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:51:23.787 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 22:56:23.794 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:01:23.802 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:06:23.809 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:11:23.819 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:16:23.827 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:21:23.824 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:26:23.831 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:31:23.840 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:36:23.845 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:41:23.850 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:46:23.858 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:51:23.862 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+05-05-2025 23:56:23.870 [AsyncResolver-bootstrap-executor-%d] [-] INFO  posts-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

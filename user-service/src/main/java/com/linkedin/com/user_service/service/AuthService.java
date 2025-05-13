@@ -7,9 +7,11 @@ import com.linkedin.com.user_service.exception.BadRequestException;
 import com.linkedin.com.user_service.exception.ResourceNotFoundException;
 import com.linkedin.com.user_service.repository.UserRepository;
 import com.linkedin.com.user_service.util.PasswordUtil;
+import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Marker;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +27,10 @@ public class AuthService {
 //    private final AuthenticationManager authenticationManager;
 
     public UserDto signup(SignupRequestDto signupRequestDto) {
+        log.info("Signing up with the User {}", signupRequestDto);
         boolean exists = userRepository.existsByEmail(signupRequestDto.getEmail());
         if(exists) {
+            log.error("User already exists, cannot signup again {}", signupRequestDto.getName());
             throw new BadRequestException("User already exists, cannot signup again.");
         }
 
@@ -35,8 +39,15 @@ public class AuthService {
 
         User savedUser= userRepository.save(user);
         PersonDto personDto = modelMapper.map(savedUser, PersonDto.class);
-        System.out.println(personDto);
-        connectionsClient.addUserToConnectionService(personDto);
+        log.info("User Created with {}",personDto);
+
+        Boolean userCreatedAtConnectionService = connectionsClient.addUserToConnectionService(personDto);
+        if(!userCreatedAtConnectionService ){
+            log .info("User cannot be created at Connection service");
+            throw new ResourceNotFoundException("User cannot be created at Connection service");
+
+        }
+        log.info("User Created at connection Service ");
 
         return modelMapper.map(user,UserDto.class);
     }

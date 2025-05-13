@@ -1,0 +1,67 @@
+12-05-2025 22:51:57.634 [background-preinit] [-] INFO  user-service-o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 8.0.1.Final
+12-05-2025 22:51:57.770 [main] [-] INFO  user-service-c.l.c.u.UserServiceApplication.logStarting - Starting UserServiceApplication using Java 22.0.2 with PID 36921 (/Users/anshulbharadwaj/SpringBootProject/linkedin/user-service/target/classes started by anshulbharadwaj in /Users/anshulbharadwaj/SpringBootProject/linkedin)
+12-05-2025 22:51:57.771 [main] [-] INFO  user-service-c.l.c.u.UserServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+12-05-2025 22:51:58.498 [main] [-] INFO  user-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12-05-2025 22:51:58.597 [main] [-] INFO  user-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+12-05-2025 22:51:58.773 [main] [-] INFO  user-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2c0f0cba-f1d5-350a-b1e4-cdfe3c7e98c0
+12-05-2025 22:51:59.022 [main] [-] WARN  user-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+12-05-2025 22:51:59.024 [main] [-] WARN  user-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+12-05-2025 22:51:59.223 [main] [-] INFO  user-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+12-05-2025 22:51:59.231 [main] [-] INFO  user-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+12-05-2025 22:51:59.233 [main] [-] INFO  user-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+12-05-2025 22:51:59.234 [main] [-] INFO  user-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+12-05-2025 22:51:59.276 [main] [-] INFO  user-service-o.a.c.c.C.[.[localhost].[/users].log - Initializing Spring embedded WebApplicationContext
+12-05-2025 22:51:59.276 [main] [-] INFO  user-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1466 ms
+12-05-2025 22:51:59.533 [main] [-] INFO  user-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+12-05-2025 22:51:59.571 [main] [-] INFO  user-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+12-05-2025 22:51:59.594 [main] [-] INFO  user-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+12-05-2025 22:51:59.790 [main] [-] INFO  user-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+12-05-2025 22:51:59.808 [main] [-] INFO  user-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+12-05-2025 22:51:59.894 [main] [-] INFO  user-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54ef9698
+12-05-2025 22:51:59.895 [main] [-] INFO  user-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+12-05-2025 22:52:00.523 [main] [-] INFO  user-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12-05-2025 22:52:00.587 [main] [-] INFO  user-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12-05-2025 22:52:00.854 [main] [-] WARN  user-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12-05-2025 22:52:01.140 [main] [-] INFO  user-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'connections-service' URL not provided. Will try picking an instance via load-balancing.
+12-05-2025 22:52:01.214 [main] [-] INFO  user-service-o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name userService
+12-05-2025 22:52:01.452 [main] [-] INFO  user-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 1 endpoint beneath base path '/actuator'
+12-05-2025 22:52:01.784 [main] [-] INFO  user-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+12-05-2025 22:52:01.809 [main] [-] WARN  user-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+12-05-2025 22:52:01.852 [main] [-] INFO  user-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+12-05-2025 22:52:01.867 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+12-05-2025 22:52:01.870 [main] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+12-05-2025 22:52:01.874 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+12-05-2025 22:52:01.875 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+12-05-2025 22:52:02.148 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+12-05-2025 22:52:02.150 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+12-05-2025 22:52:02.151 [main] [-] INFO  user-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+12-05-2025 22:52:02.152 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1747086722151 with initial instances count: 2
+12-05-2025 22:52:02.158 [main] [-] INFO  user-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application USER-SERVICE with eureka with status UP
+12-05-2025 22:52:02.159 [main] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1747086722159, current=UP, previous=STARTING]
+12-05-2025 22:52:02.160 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/192.168.60.175:user-service:9020: registering service...
+12-05-2025 22:52:02.160 [main] [-] INFO  user-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+12-05-2025 22:52:02.169 [main] [-] INFO  user-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/users'
+12-05-2025 22:52:02.170 [main] [-] INFO  user-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+12-05-2025 22:52:02.187 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  user-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/192.168.60.175:user-service:9020 - registration status: 204
+12-05-2025 22:52:02.206 [main] [-] INFO  user-service-c.l.c.u.UserServiceApplication.logStarted - Started UserServiceApplication in 5.192 seconds (process running for 5.664)
+12-05-2025 22:57:01.881 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:02:01.892 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:07:01.900 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:08:34.134 [http-nio-9020-exec-1] [-] INFO  user-service-o.a.c.c.C.[.[localhost].[/users].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12-05-2025 23:08:34.135 [http-nio-9020-exec-1] [-] INFO  user-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+12-05-2025 23:08:34.139 [http-nio-9020-exec-1] [-] INFO  user-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms
+12-05-2025 23:12:01.905 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:17:01.917 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:22:01.924 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:27:01.931 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:32:01.939 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:37:01.953 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:42:01.964 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:47:01.972 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:52:01.979 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+12-05-2025 23:57:01.986 [AsyncResolver-bootstrap-executor-%d] [-] INFO  user-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

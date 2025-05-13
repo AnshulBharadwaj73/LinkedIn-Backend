@@ -1,6 +1,7 @@
 package com.linkedin.com.user_profile.services;
 
 import com.linkedin.com.user_profile.auth.UserContextHolder;
+import com.linkedin.com.user_profile.client.UploaderClient;
 import com.linkedin.com.user_profile.dto.EducationDto;
 import com.linkedin.com.user_profile.dto.UserDto;
 import com.linkedin.com.user_profile.entity.Education;
@@ -8,6 +9,7 @@ import com.linkedin.com.user_profile.entity.User;
 import com.linkedin.com.user_profile.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.net.http.HttpClient;
 import java.util.ArrayList;
@@ -19,24 +21,41 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
+    private final UploaderClient uploaderService;
 
 
     public UserServiceImpl(UserRepository userRepository,
-                           ModelMapper modelMapper) {
+                           ModelMapper modelMapper, UploaderClient uploaderService) {
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
+        this.uploaderService = uploaderService;
     }
 
     @Override
-    public UserDto save(UserDto userDto) {
+    public UserDto save(UserDto userDto, MultipartFile file) {
         User userDto1= modelMapper.map(userDto, User.class);
+        System.out.println("UserDto: "+userDto1);
+        // Set the userId from UserContextHolder
         Long userId = UserContextHolder.getCurrentUserId();
-        userDto1.setUserId(userId);
+        System.out.println("User ID from context: " + userId);
+//        if (userId == null) {
+//            throw new RuntimeException("User ID not found in context");
+//        }
+//        // Set the userId in the UserDto
+        userDto1.setUserId(7L);
+        // Upload the image and set the URL in the UserDto
+        String imageUrl = (uploaderService.uploadImage(file));
+        userDto1.setProfilePicture(imageUrl);
         User savedUser = userRepository.insert(userDto1);
 
         // Convert back to DTO before returning
         return modelMapper.map(savedUser, UserDto.class);
     }
+
+//    @Override
+//    public UserDto save(UserDto userDto) {
+//        return null;
+//    }
 
     @Override
     public UserDto update(UserDto userDto) {
